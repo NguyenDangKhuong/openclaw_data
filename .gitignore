@@ -1,0 +1,13 @@
+# OpenClaw Data
+# Bot tokens are in openclaw.json - be careful when sharing
+
+# Workspace (has its own git repo)
+workspace/
+
+# Backup files
+*.bak
+*.bak.*
+
+# OS files
+.DS_Store
+Thumbs.db

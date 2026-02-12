@@ -1,0 +1,289 @@
+{
+    "models": {
+        "mode": "replace",
+        "providers": {
+            "cli-proxy": {
+                "baseUrl": "https://cli-proxy.thetaphoa.store/v1",
+                "apiKey": "khuong",
+                "api": "openai-completions",
+                "models": [
+                    {
+                        "id": "claude-opus-4-6-thinking",
+                        "name": "Claude Opus 4.6 Thinking",
+                        "reasoning": true,
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 200000,
+                        "maxTokens": 16384,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-2.5-pro",
+                        "name": "Gemini 2.5 Pro",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 1000000,
+                        "maxTokens": 65536,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-2.5-flash",
+                        "name": "Gemini 2.5 Flash",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 1000000,
+                        "maxTokens": 65536,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-3-pro-preview",
+                        "name": "Gemini 3 Pro Preview",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 1000000,
+                        "maxTokens": 65536,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-3-flash-preview",
+                        "name": "Gemini 3 Flash Preview",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 1000000,
+                        "maxTokens": 65536,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-claude-sonnet-4-5-thinking",
+                        "name": "Claude Sonnet 4.5 Thinking",
+                        "reasoning": true,
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 200000,
+                        "maxTokens": 16384,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gemini-claude-opus-4-5-thinking",
+                        "name": "Claude Opus 4.5 Thinking",
+                        "reasoning": true,
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 200000,
+                        "maxTokens": 16384,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gpt-5",
+                        "name": "GPT-5",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 128000,
+                        "maxTokens": 32000,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gpt-5.1",
+                        "name": "GPT-5.1",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 128000,
+                        "maxTokens": 32000,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    },
+                    {
+                        "id": "gpt-5.2",
+                        "name": "GPT-5.2",
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "contextWindow": 128000,
+                        "maxTokens": 32000,
+                        "reasoning": false,
+                        "cost": {
+                            "input": 0,
+                            "output": 0,
+                            "cacheRead": 0,
+                            "cacheWrite": 0
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "agents": {
+        "defaults": {
+            "model": {
+                "primary": "cli-proxy/gemini-3-pro-preview",
+                "fallbacks": [
+                    "cli-proxy/gemini-2.5-pro",
+                    "cli-proxy/gpt-5.2",
+                    "cli-proxy/gemini-2.5-flash"
+                ]
+            },
+            "models": {
+                "cli-proxy/claude-opus-4-6-thinking": {
+                    "alias": "opus"
+                },
+                "cli-proxy/gemini-claude-sonnet-4-5": {
+                    "alias": "claude"
+                },
+                "cli-proxy/gemini-2.5-pro": {
+                    "alias": "gemini"
+                },
+                "cli-proxy/gpt-5.2": {
+                    "alias": "gpt"
+                },
+                "cli-proxy/gpt-5": {
+                    "alias": "gpt5"
+                },
+                "cli-proxy/gemini-3-pro-preview": {
+                    "alias": "g3pro"
+                },
+                "cli-proxy/gemini-3-flash-preview": {
+                    "alias": "g3flash"
+                },
+                "cli-proxy/gemini-2.5-flash": {
+                    "alias": "flash"
+                }
+            },
+            "contextTokens": 200000,
+            "thinkingDefault": "high",
+            "timeoutSeconds": 300,
+            "maxConcurrent": 4,
+            "subagents": {
+                "maxConcurrent": 8
+            }
+        }
+    },
+    "commands": {
+        "native": "auto",
+        "nativeSkills": "auto"
+    },
+    "channels": {
+        "telegram": {
+            "enabled": true,
+            "dmPolicy": "open",
+            "botToken": "8296933974:AAFYEQsSscIuCTEKQqBLWyxjjgNJYnfah3g",
+            "replyToMode": "first",
+            "groups": {
+                "*": {
+                    "requireMention": true
+                }
+            },
+            "allowFrom": [
+                "*"
+            ],
+            "groupPolicy": "allowlist",
+            "historyLimit": 50,
+            "streamMode": "partial",
+            "mediaMaxMb": 5,
+            "linkPreview": true
+        },
+        "zalo": {
+            "enabled": true,
+            "botToken": "3705241397568249916:fhCEeXdgbUcQnRqWRgVjlurHgMWDEtiMnliVovjeBMyKlUrhjYRlOHXorCKDNAJT",
+            "dmPolicy": "open",
+            "allowFrom": [
+                "*"
+            ],
+            "mediaMaxMb": 5
+        }
+    },
+    "gateway": {
+        "port": 18789,
+        "mode": "local",
+        "bind": "lan"
+    },
+    "messages": {
+        "ackReactionScope": "group-mentions"
+    },
+    "plugins": {
+        "entries": {
+            "telegram": {
+                "enabled": true
+            },
+            "zalo": {
+                "enabled": true
+            }
+        },
+        "allow": [
+            "telegram",
+            "zalo"
+        ]
+    },
+    "meta": {
+        "lastTouchedVersion": "2026.1.30",
+        "lastTouchedAt": "2026-02-12T07:18:48.828Z"
+    }
+}

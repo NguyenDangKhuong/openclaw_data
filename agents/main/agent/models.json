@@ -1,0 +1,181 @@
+{
+  "providers": {
+    "cli-proxy": {
+      "baseUrl": "https://cli-proxy.thetaphoa.store/v1",
+      "apiKey": "khuong",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "claude-opus-4-6-thinking",
+          "name": "Claude Opus 4.6 Thinking",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 16384
+        },
+        {
+          "id": "gemini-2.5-pro",
+          "name": "Gemini 2.5 Pro",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 65536
+        },
+        {
+          "id": "gemini-2.5-flash",
+          "name": "Gemini 2.5 Flash",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 65536
+        },
+        {
+          "id": "gemini-3-pro-preview",
+          "name": "Gemini 3 Pro Preview",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 65536
+        },
+        {
+          "id": "gemini-3-flash-preview",
+          "name": "Gemini 3 Flash Preview",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1000000,
+          "maxTokens": 65536
+        },
+        {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5 Thinking",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 16384
+        },
+        {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5 Thinking",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 16384
+        },
+        {
+          "id": "gpt-5",
+          "name": "GPT-5",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 32000
+        },
+        {
+          "id": "gpt-5.1",
+          "name": "GPT-5.1",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 32000
+        },
+        {
+          "id": "gpt-5.2",
+          "name": "GPT-5.2",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 128000,
+          "maxTokens": 32000
+        }
+      ]
+    }
+  }
+}
