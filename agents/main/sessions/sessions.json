@@ -1,28 +1,22 @@
 {
   "agent:main:main": {
-    "sessionId": "38cb0b7b-b17f-4aac-8db6-c7e6bfd61eb8",
-    "updatedAt": 1770883374916,
+    "sessionId": "ca1642b9-a723-4418-a255-7ae333960e71",
+    "updatedAt": 1770952962828,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
     "deliveryContext": {
-      "channel": "zalo",
-      "to": "zalo:25420ecf4387aad9f396",
-      "accountId": "default"
+      "channel": "webchat"
     },
     "origin": {
-      "provider": "zalo",
-      "surface": "zalo",
-      "chatType": "direct",
-      "label": "user:25420ecf4387aad9f396",
-      "from": "zalo:25420ecf4387aad9f396",
-      "to": "zalo:25420ecf4387aad9f396",
-      "accountId": "default"
+      "provider": "webchat",
+      "surface": "webchat",
+      "chatType": "direct"
     },
-    "sessionFile": "/home/node/.openclaw/agents/main/sessions/38cb0b7b-b17f-4aac-8db6-c7e6bfd61eb8.jsonl",
+    "sessionFile": "/home/node/.openclaw/agents/main/sessions/ca1642b9-a723-4418-a255-7ae333960e71.jsonl",
     "compactionCount": 0,
     "skillsSnapshot": {
-      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/app/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/app/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/app/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\n\n<available_skills>\n  <skill>\n    <name>bluebubbles</name>\n    <description>Build or update the BlueBubbles external channel plugin for OpenClaw (extension package, REST send/probe, webhook inbound).</description>\n    <location>/app/skills/bluebubbles/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create or update AgentSkills. Use when designing, structuring, or packaging skills with scripts, references, and assets.</description>\n    <location>/app/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts (no API key required).</description>\n    <location>/app/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>n8n MCP Integration</name>\n    <description>Manage n8n workflows via MCP Server (n8n-test instance). Create, update, delete, execute workflows, manage credentials, validate, backup — all through HTTP API calls to the n8n-custom-mcp server (31 tools).</description>\n    <location>/home/node/.openclaw/skills/n8n-mcp/SKILL.md</location>\n  </skill>\n</available_skills>",
       "skills": [
         {
           "name": "bluebubbles"
@@ -32,6 +26,9 @@
         },
         {
           "name": "weather"
+        },
+        {
+          "name": "n8n MCP Integration"
         }
       ],
       "resolvedSkills": [
@@ -58,21 +55,29 @@
           "baseDir": "/app/skills/weather",
           "source": "openclaw-bundled",
           "disableModelInvocation": false
+        },
+        {
+          "name": "n8n MCP Integration",
+          "description": "Manage n8n workflows via MCP Server (n8n-test instance). Create, update, delete, execute workflows, manage credentials, validate, backup — all through HTTP API calls to the n8n-custom-mcp server (31 tools).",
+          "filePath": "/home/node/.openclaw/skills/n8n-mcp/SKILL.md",
+          "baseDir": "/home/node/.openclaw/skills/n8n-mcp",
+          "source": "openclaw-managed",
+          "disableModelInvocation": false
         }
       ],
-      "version": 0
+      "version": 1770950355955
     },
-    "lastChannel": "zalo",
-    "inputTokens": 11230,
-    "outputTokens": 473,
-    "totalTokens": 11230,
+    "lastChannel": "webchat",
+    "inputTokens": 81878,
+    "outputTokens": 191,
+    "totalTokens": 81878,
     "modelProvider": "cli-proxy",
     "model": "gemini-3-pro-preview",
     "contextTokens": 200000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1770883365774,
-      "sessionId": "38cb0b7b-b17f-4aac-8db6-c7e6bfd61eb8",
+      "generatedAt": 1770952929124,
+      "sessionId": "ca1642b9-a723-4418-a255-7ae333960e71",
       "sessionKey": "agent:main:main",
       "provider": "cli-proxy",
       "model": "gemini-3-pro-preview",
@@ -83,9 +88,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 20419,
-        "projectContextChars": 11769,
-        "nonProjectContextChars": 8650
+        "chars": 20969,
+        "projectContextChars": 11944,
+        "nonProjectContextChars": 9025
       },
       "injectedWorkspaceFiles": [
         {
@@ -124,8 +129,8 @@
           "name": "USER.md",
           "path": "/home/node/.openclaw/workspace/USER.md",
           "missing": false,
-          "rawChars": 521,
-          "injectedChars": 521,
+          "rawChars": 696,
+          "injectedChars": 696,
           "truncated": false
         },
         {
@@ -146,7 +151,7 @@
         }
       ],
       "skills": {
-        "promptChars": 908,
+        "promptChars": 1274,
         "entries": [
           {
             "name": "bluebubbles",
@@ -159,6 +164,10 @@
           {
             "name": "weather",
             "blockChars": 185
+          },
+          {
+            "name": "n8n MCP Integration",
+            "blockChars": 363
           }
         ]
       },
@@ -222,7 +231,7 @@
           },
           {
             "name": "message",
-            "summaryChars": 93,
+            "summaryChars": 110,
             "schemaChars": 3222,
             "propertiesCount": 79
           },
@@ -288,8 +297,6 @@
           }
         ]
       }
-    },
-    "lastTo": "zalo:25420ecf4387aad9f396",
-    "lastAccountId": "default"
+    }
   }
 }
